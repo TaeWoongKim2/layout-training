@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import styled from 'styled-components';
-
 import './App.css';
 
 import {
@@ -13,10 +11,6 @@ import {
   LogoGithub,
   LogoGoogle,
 } from 'react-ionicons';
-
-const NavMenu = styled.nav`
-  background: ${(props) => props.color};
-`;
 
 function App() {
   const [menuActive, setMenuActive] = useState(false);
@@ -32,6 +26,7 @@ function App() {
           cssClasses="header__toggle"
           color="var(--white-color)"
           onClick={() => setMenuActive(true)}
+          style={{ display: 'flex' }}
         />
 
         <nav
@@ -39,11 +34,13 @@ function App() {
           className={`nav ${menuActive ? 'show' : ''}`}
         >
           <div className="nav__content bd-grid">
-            <Close
-              cssClasses="nav__close"
-              color="var(--white-color)"
-              onClick={() => setMenuActive(false)}
-            />
+            <div className="nav__toggle">
+              <Close
+                cssClasses="nav__close"
+                color="var(--white-color)"
+                onClick={() => setMenuActive(false)}
+              />
+            </div>
 
             <div className="nav__perfil">
               <div className="nav__img">
@@ -66,7 +63,7 @@ function App() {
                     <Link
                       to={`#${item}`}
                       className="nav__link"
-                      onClick={() => setMenuActive({ item })}
+                      onClick={() => setMenuItemActive({ item })}
                     >
                       { item }
                     </Link>

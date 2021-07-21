@@ -19,4 +19,3 @@ HTML, CSS, JavaScript를 활용하여 페이지 레이아웃을 만드는 연습
 3. [ionic.io]("https://ionic.io/ionicons", "ionic link")
     - [React ionic.io]("https://react-ionicons.netlify.app", "react ionic link")
     - [React ionic.io manual]("https://www.npmjs.com/package/react-ionicons", "ionic link")
-
