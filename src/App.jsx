@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import './App.css';
-
 import { Menu } from 'react-ionicons';
 
 import Nav from './components/Navigator/Nav';
+
+import './App.css';
 
 function App() {
   const [menuActive, setMenuActive] = useState(false);
