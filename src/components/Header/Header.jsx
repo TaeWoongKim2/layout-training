@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 
 import styled from 'styled-components';
 
-import { Link } from 'react-router-dom';
-
-import { Menu } from 'react-ionicons';
-
+import HeaderContent from './HeaderContent';
 import Nav from '../Navigator/Nav';
 
 const StyledHeader = styled.header.attrs((props) => ({
@@ -19,14 +16,7 @@ export default function Header() {
     <StyledHeader
       className="header"
     >
-      <Link to="#header" className="header__logo">EHOTO</Link>
-
-      <Menu
-        cssClasses="header__toggle"
-        color="var(--white-color)"
-        onClick={() => setMenuActive(true)}
-        style={{ display: 'flex' }}
-      />
+      <HeaderContent onClick={setMenuActive} />
 
       <Nav
         active={menuActive}
