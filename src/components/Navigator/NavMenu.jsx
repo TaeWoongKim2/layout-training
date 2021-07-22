@@ -21,7 +21,7 @@ export default function NavMenu({
         {menus.map((item) => (
           <li
             key={item}
-            className={`nav__item ${menuItemActive === item ? 'active' : ''}`}
+            className={`nav__item ${menuItemActive.item === item ? 'active' : ''}`}
           >
             <Link
               to={`#${item}`}

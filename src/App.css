@@ -152,10 +152,6 @@ img {
   overflow: hidden;
 }
 
-.nav__img img {
-  /* width: 46px; */
-}
-
 .nav__name {
   display: block;
   color: var(--white-color);
@@ -200,6 +196,10 @@ img {
 
 /*Active menu*/
 .active {
+  color: var(--first-color);
+}
+
+.active a {
   color: var(--first-color);
 }
 

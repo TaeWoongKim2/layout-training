@@ -16,7 +16,10 @@ export default function Header() {
     <StyledHeader
       className="header"
     >
-      <HeaderContent onClick={setMenuActive} />
+      <HeaderContent
+        logo="EHOTO"
+        onClick={setMenuActive}
+      />
 
       <Nav
         active={menuActive}
