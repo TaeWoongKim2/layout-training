@@ -4,30 +4,16 @@ import { Link } from 'react-router-dom';
 
 import { Menu } from 'react-ionicons';
 
-import Nav from './components/Navigator/Nav';
+import Header from './components/Header/Header';
 
 import './App.css';
 
 function App() {
-  const [menuActive, setMenuActive] = useState(false);
+  
 
   return (
     <>
-      <header className="header">
-        <Link to="#header" className="header__logo">EHOTO</Link>
-
-        <Menu
-          cssClasses="header__toggle"
-          color="var(--white-color)"
-          onClick={() => setMenuActive(true)}
-          style={{ display: 'flex' }}
-        />
-
-        <Nav
-          active={menuActive}
-          onClick={setMenuActive}
-        />
-      </header>
+      <Header />
     </>
   );
 }
