@@ -1,16 +1,10 @@
-import React, { useState } from 'react';
-
-import { Link } from 'react-router-dom';
-
-import { Menu } from 'react-ionicons';
+import React from 'react';
 
 import Header from './components/Header/Header';
 
 import './App.css';
 
 function App() {
-  
-
   return (
     <>
       <Header />

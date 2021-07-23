@@ -252,6 +252,14 @@ img {
   .nav__img img {
     width: 26px;
   }
+  .nav__profession {
+    display: none;
+  }
+  .nav__menu {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
   .nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -268,7 +276,6 @@ img {
     background-color: var(--first-color);
   }
   .active {
-    background-color: var(--first-color);
     color: var(--white-color);
   }
 }
