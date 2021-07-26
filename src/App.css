@@ -91,6 +91,7 @@ img {
 }
 
 .header__toggle {
+  display: inherit;
   font-size: 1.5rem;
   color: var(--white-color);
   cursor: pointer;

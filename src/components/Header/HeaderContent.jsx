@@ -16,7 +16,6 @@ export default function HeaderContent({
         cssClasses="header__toggle"
         color="var(--white-color)"
         onClick={() => onClick(true)}
-        style={{ display: 'flex' }}
       />
     </>
   );
