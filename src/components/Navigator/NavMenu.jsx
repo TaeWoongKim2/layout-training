@@ -14,6 +14,11 @@ export default function NavMenu({
 }) {
   const [menuItemActive, setMenuItemActive] = useState({ item: '' });
 
+  function handleClickMenu(menu) {
+    setMenuItemActive({ item: menu });
+    onClose();
+  }
+
   return (
     <StyledNavMenu
       className="nav__menu"
@@ -27,10 +32,7 @@ export default function NavMenu({
             <Link
               to={`/${item.toLowerCase()}`}
               className="nav__link"
-              onClick={() => {
-                setMenuItemActive({ item });
-                onClose();
-              }}
+              onClick={() => handleClickMenu(item)}
             >
               { item }
             </Link>
