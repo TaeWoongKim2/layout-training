@@ -10,7 +10,7 @@ export default function HeaderContent({
 }) {
   return (
     <>
-      <Link to="#header" className="header__logo">{logo}</Link>
+      <Link to="/" className="header__logo">{logo}</Link>
 
       <Menu
         cssClasses="header__toggle"

@@ -27,6 +27,7 @@ export default function NavContent({
 
       <NavMenu
         menus={['Home', 'About', 'Skills', 'Portfolio', 'Contact']}
+        onClose={onClick}
       />
 
       <NavSocial />

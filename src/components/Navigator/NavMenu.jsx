@@ -10,6 +10,7 @@ const StyledNavMenu = styled.div.attrs((props) => ({
 
 export default function NavMenu({
   menus = ['Home', 'About', 'Skills', 'Portfolio', 'Contact'],
+  onClose,
 }) {
   const [menuItemActive, setMenuItemActive] = useState({ item: '' });
 
@@ -24,9 +25,12 @@ export default function NavMenu({
             className={`nav__item ${menuItemActive.item === item ? 'active' : ''}`}
           >
             <Link
-              to={`#${item}`}
+              to={`/${item.toLowerCase()}`}
               className="nav__link"
-              onClick={() => setMenuItemActive({ item })}
+              onClick={() => {
+                setMenuItemActive({ item });
+                onClose();
+              }}
             >
               { item }
             </Link>
