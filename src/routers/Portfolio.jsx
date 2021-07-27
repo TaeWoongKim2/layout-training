@@ -43,7 +43,7 @@ const defaultBottomNav = {
   },
 };
 
-const changeNavActive = (item) => ({
+const changeActiveNav = (item) => ({
   ...defaultBottomNav,
   [item]: {
     ...defaultBottomNav[item],
@@ -51,20 +51,31 @@ const changeNavActive = (item) => ({
   },
 });
 
+const findIndexOfActiveNav = (navigator) => {
+  const navItems = Object.keys(navigator);
+  const activeNavIndex = navItems.findIndex((key) => navigator[key].active) + 1;
+  return activeNavIndex;
+};
+
 export default function Portfolio() {
   const [bottomNav, setBottomNav] = useState(
-    changeNavActive('home'),
+    changeActiveNav('home'),
   );
 
+  const activeIndex = findIndexOfActiveNav(bottomNav);
+
   function handleClick(item) {
-    const newBottonNav = changeNavActive(item);
+    const newBottonNav = changeActiveNav(item);
     setBottomNav(newBottonNav);
   }
 
   return (
     <>
       <ul className="bottom__nav">
-        <span className="bottom__nav__indicator" />
+        <span
+          className="bottom__nav__indicator"
+          style={{ left: `calc(${activeIndex * 120 - 60}px - 45px)` }}
+        />
         {Object.keys(bottomNav).map((nav) => {
           const {
             link, title, icon, active,
