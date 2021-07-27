@@ -55,7 +55,7 @@ export default function Portfolio() {
         {Object.keys(bottomNav).map((navItem) => {
           const {
             key, link, title, icon, active,
-          } = navItem;
+          } = bottomNav[navItem];
 
           return (
             <li key={key}>
