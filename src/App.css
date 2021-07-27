@@ -112,6 +112,10 @@ img {
     -webkit-transition: .5s;
     transition: .5s;
   }
+
+  .content {
+    padding-top: 0;
+  }
 }
 
 .nav__content {
@@ -278,6 +282,9 @@ img {
   }
   .active {
     color: var(--white-color);
+  }
+  .content {
+    padding-top: calc(var(--header-height) + 1rem);
   }
 }
 
