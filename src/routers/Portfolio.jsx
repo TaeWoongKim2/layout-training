@@ -1,41 +1,48 @@
 import React from 'react';
 
+import {
+  HomeOutline,
+  FingerPrintOutline,
+  CodeSlashOutline,
+  QrCodeOutline,
+  PhonePortraitOutline,
+} from 'react-ionicons';
+
 export default function Portfolio() {
   return (
     <>
-      <h2>Portfolio!</h2>
-
       <div className="workspace">
         <ul className="bottom__nav">
           <span className="bottom__nav__indicator" />
           <li>
             <a href="#home">
-              <i className="bx bx-home" />
-              Home
+              <HomeOutline color="#00000" />
+              <span className="bottom__nav__title">Home</span>
             </a>
           </li>
           <li>
             <a href="#about">
-              <i className="bx bx-about" />
-              About
+              <FingerPrintOutline color="#00000" />
+              <span className="bottom__nav__title">About</span>
             </a>
           </li>
           <li>
             <a href="#skills">
-              <i className="bx bx-skill" />
-              Skills
+              <CodeSlashOutline color="#00000" />
+              <i className="bx bx-code-curly" />
+              <span className="bottom__nav__title">Skills</span>
             </a>
           </li>
           <li>
             <a href="#portfolio">
-              <i className="bx bx-portfolio" />
-              Portfolio
+              <QrCodeOutline color="#00000" />
+              <span className="bottom__nav__title">Portfolio</span>
             </a>
           </li>
           <li>
             <a href="#contact">
-              <i className="bx bx-contact" />
-              Contact
+              <PhonePortraitOutline color="#00000" />
+              <span className="bottom__nav__title">Contact</span>
             </a>
           </li>
         </ul>

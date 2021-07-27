@@ -11,6 +11,11 @@
   --dark-color-alt: #282B3A;
   --white-color: #E6E7E9;
 
+  --bg-content: #dff9fb;
+  --bg-bottom-nav: #220455;
+  --color-bottom-nav: #644c89;
+  --color-bottom-nav-active: #fff;
+
   /*===== Fuente y tipografia =====*/
   --body-font: 'Poppins', sans-serif;
   --normal-font-size: .938rem;
@@ -29,6 +34,8 @@
 
 /*===== BASE =====*/
 *, ::before, ::after {
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -95,6 +102,18 @@ img {
   font-size: 1.5rem;
   color: var(--white-color);
   cursor: pointer;
+}
+
+.content {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: cursive;
+  background-color: var(--bg-content);
+}
+
+.workspace {
+  
 }
 
 /*===== NAV =====*/
