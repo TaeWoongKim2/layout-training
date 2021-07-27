@@ -334,12 +334,24 @@ img {
   border-radius: 20px;
 }
 
+.bottom__nav .bottom__nav__indicator {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: var(--bg-bottom-nav);
+  position: absolute;
+  top: -35px;
+  left: calc(300px - 45px);
+  transition: left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 .bottom__nav li a {
   text-decoration: none;
   color: var(--color-bottom-nav);
   width: 120px;
   height: 100%;
   display: inline-grid;
+  place-items: center;
   align-content: center;
   justify-content: center;
   font-size: 30px;
@@ -349,6 +361,17 @@ img {
 
 .bottom__nav li a:hover {
   color: var(--white-color);
+}
+
+.bottom__nav li a.bottom__nav__item__active {
+  color: var(--color-bottom-nav-active);
+  transform: translateY(-40%);
+  font-size: 45px;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bottom__nav li a.bottom__nav__item__active .bottom__nav__title {
+  display: block;
 }
 
 .bottom__nav li a .bottom__nav__title {
